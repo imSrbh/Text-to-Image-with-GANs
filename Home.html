@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body background="b.jpg">
+
+  <head>
+    <meta charset="utf-8">
+
+    <style>
+     <script type="text/javascript">
+
+        function picture(){
+        var pic = "http://img.tesco.com/Groceries/pi/118/5000175411118/IDShot_90x90.jpg"
+        document.getElementById('bigpic').src = pic.replace('90x90', '225x225');
+
+        }
+    </script>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing:content-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+    input[type=submit] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+    </style>
+
+    <title>Image Generation</title>
+
+  </head>
+  <body>
+
+    <h1 align="center">Query Based Image Synthesis Using GANs</h1>
+<div class="container">
+
+
+  <p>Dataset Selection to Generate Images?</p>
+    <select name="dataset">
+      <option value="cc">Birds Dataset</option>
+      <option value="b">BedRoom Dataset</option>
+      <option value="c">COCO Dataset</option>
+    </select>
+
+    <center><input type="submit" ></center>
+
+
+    <p></p>
+
+
+
+</div>
+
+<div class="container">
+    <center><img id = "bigpic" src = "result.jpg" class="centerImage" style="display:none;"></center>
+</div>
+  </body>
+</html>
